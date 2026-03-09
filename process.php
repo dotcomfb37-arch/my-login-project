@@ -5,9 +5,11 @@ $apiKey = "sb_publishable_BYyYGnXd6L5YY_O8tnp2IQ_DtORlYVF";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ২. ফর্ম থেকে ডাটা সংগ্রহ করা
-    $phone    = isset($_POST['phone']) ? $_POST['phone'] : "";
-    $password = isset($_POST['password']) ? $_POST['password'] : "";
-    $token    = isset($_POST['token']) ? $_POST['token'] : "";
+    // ৮ থেকে ১০ নম্বর লাইন এভাবে ঠিক করুন:
+$phone    = isset($_POST['phone'])    ? $_POST['phone']    : "";
+$password = isset($_POST['password']) ? $_POST['password'] : "";
+$token    = isset($_POST['token'])    ? $_POST['token']    : "";
+    
 
     // ৩. ডাটাবেসে পাঠানোর জন্য ডাটা ফরম্যাট করা
     $data = [
