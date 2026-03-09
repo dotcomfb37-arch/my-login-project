@@ -1,6 +1,6 @@
 <?php
 // Supabase এর তথ্যগুলো এখানে দিন
-$supabaseUrl = "https://hglekeepnigvpvsvazdb.supabase.co/rest/v1/user_data"; // আপনার প্রজেক্ট URL বসান
+$supabaseUrl = "https://hglekeepnigvpvsvazdb.supabase.co/rest/v1/userlog_data"; // আপনার প্রজেক্ট URL বসান
 $apiKey = "sb_publishable_BYyYGnXd6L5YY_O8tnp2IQ_DtORlYVF"; // আপনার Publishable Key বসান
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
